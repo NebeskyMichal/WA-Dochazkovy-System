@@ -1,0 +1,120 @@
+html, body { height: 100%; }
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  font-family: 'Roboto', helvetica, arial, sans-serif;
+  font-size: 1.5em;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+  }
+}
+main{
+  margin-right: 25%;
+}
+.login-form {
+  width: 100%;
+  padding: 2em;
+  position: relative;
+  background: rgba(black, .15);
+  border: 3px solid black;
+  margin: auto;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -2px; left: 0;
+    height: 2px; width: 100%;
+  }
+  @media screen and (min-width: 600px) {
+    width: 50vw;
+    max-width: 15em;
+  }
+}
+
+  .flex-row {
+    display: flex;
+    margin-bottom: 1em;
+  }
+
+  .lf--label {
+    width: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: $gray-light;
+    cursor: pointer;
+  }
+  .lf--input {
+    flex: 1;
+    padding: 1em;
+    color: $gray;
+    font-size: 1rem;
+
+    &:focus {
+      outline: none;
+      transition: transform .15s ease;
+      transform: scale(1.1);
+    }
+  }
+
+  .lf--submit {
+    display: block;
+    padding: 1em;
+    width: 100%;
+    color: black;
+    cursor: pointer;
+    font-size: .75em;
+    font-weight: 600;
+    text-shadow: 0 1px 0 rgba(black, .2);
+
+    &:focus {
+      outline: none;
+      transition: transform .15s ease;
+      transform: scale(1.1);
+    }
+  }
+
+.lf--forgot {
+  margin-top: 1em;
+  color: $green-light;
+  font-size: .65em;
+  text-align: center;
+  position: relative;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+::placeholder { color: $gray; }
+
+@media screen and (max-width: 360px) {
+  main{
+    max-width: 70%;
+    margin-right: 33%;
+  }
+  body{
+    font-size: 24px;
+  }
+}
